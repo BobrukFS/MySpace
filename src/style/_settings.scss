@@ -1,0 +1,21 @@
+$colores : (
+    "primario" : #FFB018,
+    "secundario" : #FF2900,
+    "terciario" : #6F26BB,
+);
+
+$fuentes :(
+    "primaria" : Lilita One,
+    "secundario" : Teko,
+);
+
+
+
+
+p, a{
+    font-family: map-get($map: $fuentes, $key: secundario);
+}
+
+h1,h2,h3,h4{
+    font-family: map-get($map: $fuentes, $key: primaria);
+}

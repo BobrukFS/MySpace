@@ -1,0 +1,62 @@
+@use 'src/style/_settings.scss' as *;
+
+
+.result{
+    position: absolute;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: 40rem;
+    max-width: 40rem;
+    align-items: center;
+    border-radius: .5rem;
+  
+
+    &__buttons{
+        display: flex;
+        gap:1rem;
+    }
+    &__btn{
+        background-color: map-get($map: $colores, $key: terciario);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        border-radius: 1rem;
+
+        &:hover{
+            cursor: pointer;
+            background-color: map-get($map: $colores, $key: primario);
+        }
+    }
+
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            color: map-get($map: $colores, $key: terciario);
+            font-size: 3rem;
+            font-family: map-get($map: $fuentes, $key: secundario);
+        }
+        
+        p{
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+        }
+
+        .result__porcentaje{
+           
+            border-radius: 50%;
+            padding: 3rem;
+            font-size: 3rem;
+            background-color: map-get($map: $colores, $key: terciario);
+            color: white;
+        }
+    }
+}

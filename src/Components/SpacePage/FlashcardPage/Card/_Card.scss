@@ -1,0 +1,133 @@
+@use 'src/style/_settings.scss' as *;
+
+
+.flashcard{
+
+  
+  width: 25rem;
+  height: 30rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  transition: transform 0.3s;
+  transform: rotateY(0deg);
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100%;
+   
+
+    h2{
+      font-size: 2rem;
+      line-height: 1;
+      font-family: map-get($map: $fuentes, $key: secundario);
+      color: map-get($map: $colores, $key: terciario);
+      font-weight: 700;
+
+    }
+
+    p{
+      font-size: 1.6rem;
+    }
+
+    div{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
+
+  input, textarea{
+    border: none;
+    background-color: rgb(241, 190, 47);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    margin: .5rem 0rem;
+    color: white;
+    font-size: 2rem;
+    font-family: map-get($map: $fuentes, $key: secundario);
+  }
+
+  textarea{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    height: 10rem;
+  }
+
+  &__delete{
+    background: transparent;
+    border: none;
+    color: map-get($map: $colores, $key: primario);
+    font-size: 1.6rem;
+    align-self: end;
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+
+  &__listo{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    margin-bottom: 2rem;
+    transform: translate(50%);
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    color:  #5ad1e6;
+  }
+
+  &__show-answer{
+    border: none;
+    background-color: map-get($map: $colores, $key: terciario);
+    position: absolute;
+    bottom: -2rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 700;
+    width: 80%;
+    border-radius: 2rem;
+    right: 50%;
+    transform: translate(50%);
+
+  }
+
+  &__next{
+    border: none;
+    background-color: rgb(47, 212, 74);
+    border-radius: 50%;
+    width: fit-content;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+
+    &:nth-child(2){
+      background-color: red;
+    }
+    
+  }
+
+  .flashcard__btn-container{
+     display: flex;
+     flex-direction: row;
+     gap: 2rem;
+     justify-content: center;
+     position: absolute;
+     bottom: -6rem;
+     right: 50%;
+     transform: translate(50%);
+  }
+}
+
+.girar{
+  
+  transform: rotateY(360deg);
+}

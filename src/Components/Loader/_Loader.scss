@@ -1,0 +1,60 @@
+@use 'src/style/_settings.scss' as *;
+
+.loader{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    div{
+        display: flex;
+    }
+
+    &__planeta{
+        width: 15rem;
+        height: 15rem;
+        animation: saltos 1s linear infinite;
+
+       &--1{
+        animation-delay: .2s;
+       }
+
+       &--2{
+        animation-delay: .1s;
+       }
+
+       &--3{
+        animation-delay: 0s;
+       }
+
+
+    }
+
+    &__p{
+        font-size: 4rem;
+        font-family: map-get($map: $fuentes, $key: primaria);
+        color: map-get($map: $colores, $key: primario);
+    }
+}
+
+@keyframes saltos {
+    0%{
+       
+            transform: translateY(0);
+     
+    }
+
+    50%{
+
+        
+        transform: translateY(10rem);
+
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}

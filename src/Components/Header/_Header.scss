@@ -1,0 +1,95 @@
+@use 'src/style/_settings.scss' as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 2rem;
+    background-color: #6F26BB;
+    z-index: 10;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+
+    
+
+
+    &__logo{
+        display: flex;
+        gap: 1rem;
+        h1{
+            color: white;
+            font-size: 3rem;
+            width: fit-content;
+            z-index: 3;
+            position: relative;
+
+            span{
+                
+                color: #ff0078;
+
+                &:nth-child(2){
+                    font-size: 1.6rem;
+                    color: rgb(255, 226, 60);
+                    position: absolute;
+                    bottom: 0;
+                    margin-left: .5rem;
+                }
+            }
+          
+        }
+  
+        img{
+            width: 5rem;
+            height: 5rem;
+            z-index: 3;
+        }
+    }
+}
+
+
+.hidden{
+    transform: translateY(-10rem);
+    transition: all 1s ease;
+}
+
+.visible{
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+
+@media (min-width: 768px) { 
+   
+
+    .header{
+        background-color: map-get($map: $colores, $key: terciario);
+        display: flex;
+        width: 100vw;
+        margin: 0;
+        padding: 2rem 4rem;
+        align-items: center ;
+    }
+
+    .visible{
+        transform: translate(0);
+    }
+
+    .hidden{
+        transform: translate(0);
+    }
+
+ 
+}
+
+@media (min-width: 1024px) { 
+    .header{
+        padding: 2rem 6rem;
+    }
+}
+
+@media (min-width: 1440px) { 
+    .header{
+        padding: 2rem 8rem;
+    }
+}

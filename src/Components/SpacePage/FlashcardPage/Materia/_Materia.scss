@@ -1,0 +1,59 @@
+@use 'src/style/_settings.scss' as *;
+
+
+.materias{
+    background-color: #4b0d2c;
+    padding: 1rem 2rem;
+    
+    
+}
+
+#slide{
+    &:hover, &:active{
+        cursor: pointer;
+        color: map-get($map: $colores, $key: primario);
+        text-decoration: underline;
+    }
+}
+
+#swiper{
+    
+    font-size: 1.8rem;
+   
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 50rem;
+
+
+    .swiper-wrapper{
+        display: flex;
+        align-items: end;
+    }
+
+    button{
+        display: flex;
+        border-radius: 50%;
+        border: none;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 700;
+        background-color: #bb4a82;
+        padding: .5rem 1rem;
+        color: white;
+        height: fit-content;
+
+        &:hover{
+            cursor: pointer;
+        }
+        }
+}
+
+
+@media (min-width: 1440px) { 
+    #swiper{
+       max-height: 5.2rem;
+        max-width: 70rem;
+    }
+}

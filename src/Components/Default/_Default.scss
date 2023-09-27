@@ -1,0 +1,40 @@
+@use 'src/style/_settings.scss' as *;
+
+.default{
+    background-image: url('/src/assets/default.jpg');
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    flex-direction: column;
+
+    &__p{
+        font-size: 3rem;
+        font-family: map-get($map: $fuentes, $key: secundaria);
+        &:nth-child(2){
+            font-size: 3rem;
+            color: map-get($map: $colores, $key: primario );
+            font-family: map-get($map: $fuentes, $key: primaria);
+        }
+    }
+
+}
+
+
+@media (min-width: 1024px) { 
+    .default{
+        &__p{
+            font-size: clamp(3rem,4vw, 6rem);
+         
+            &:nth-child(2){
+                font-size: clamp(3rem,4vw, 6rem);
+                font-family: map-get($map: $fuentes, $key: primaria);
+                font-weight: 700;
+    
+            }
+        }
+    }
+}

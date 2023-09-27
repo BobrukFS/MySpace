@@ -1,0 +1,63 @@
+
+//Settings
+@use 'src/style/_normalize.scss';
+@use 'src/style/_settings.scss';
+
+
+//Components
+
+//Header
+
+@use 'src/Components/Header/_Header.scss';
+@use 'src/Components/Header/Nav/_Nav.scss';
+@use 'src/Components/Header/ButtonNav/_ButtonNav.scss';
+
+
+//Intro
+
+@use 'src/Components/IntroPage/_IntroPage.scss';
+
+//Modal
+
+@use 'src/Components/Modal/_Modal.scss';
+
+//Space Page
+
+@use 'src/Components/SpacePage/_SpacePage.scss';
+@use 'src/Components/SpacePage/FlashcardPage/FlashcardPage.scss';
+@use 'src/Components/SpacePage/HeaderSpace/_HeaderSpace.scss';
+@use 'src/Components/SpacePage/FlashcardPage/Card/_Card.scss';
+@use 'src/Components/SpacePage/FlashcardPage/Result/_Result.scss';
+@use 'src/Components/SpacePage/FlashcardPage/Materia/_Materia.scss';
+
+//Default
+
+@use 'src/Components/Default/_Default.scss';
+
+//Contact
+
+@use 'src/Components/ContactPage/_ContactPage.scss';
+
+//Tarea
+@use 'src/Components/SpacePage/TasksPage/Task/_Task.scss';
+@use 'src/Components/SpacePage/TasksPage/Tasks.scss';
+
+
+//Loader
+
+@use 'src/Components/Loader/_Loader.scss';
+
+html, body{
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+html{
+    overflow:  auto;
+}
+
+body{
+    overflow-x: hidden;
+}

@@ -1,0 +1,98 @@
+@use 'src/style/_settings.scss' as *;
+
+.modal{
+    position: absolute;
+    background-color: white;
+    padding: 2rem;
+    margin-top: 10rem;
+    height: calc(100vh - 10rem);
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    h2{
+        width: fit-content;
+        font-size: 3rem;
+        color: map-get($map: $colores, $key: primario);
+    }
+
+    &__content{
+        display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 40rem;
+
+    input{
+        font-size: 2rem;
+        width: 100%;
+        padding: 0rem 1rem;
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    label{
+        font-size: 2rem;
+        color: map-get($map: $colores, $key: terciario);
+        font-family: map-get($map: $fuentes, $key: secundario);
+    }
+
+    button{
+        width: fit-content;
+        font-size: 2rem;
+        padding: .5rem 1rem;
+        background-color: map-get($map: $colores, $key: terciario);
+        border: none;
+        color: white;
+        border-radius: 1rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+    
+    }
+    }
+
+    .modal-btn{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        button{
+            width: 100%;
+        }
+    }
+
+    
+
+    &__close{
+     
+        margin: 2rem;
+        padding: 1rem 1.5rem;
+        border-radius: 50%;
+        border: none;
+        font-size: 2rem;
+        font-weight: 700;
+       background-color: map-get($map: $colores, $key: terciario);
+        color: white;
+    }
+
+    .modal__btn-secondary{
+        background-color: white;
+        color: map-get($map: $colores, $key: terciario);
+       
+    }
+ 
+}
+

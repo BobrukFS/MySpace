@@ -1,0 +1,100 @@
+@use 'src/style/_settings.scss' as *;
+
+
+.nav{
+    background-color: map-get($map: $colores, $key: terciario);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateX(100vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+    z-index: 2;
+    padding: 10rem 2rem;
+
+
+    &__enlace{
+        text-decoration: none;
+        color: white;
+        font-size: 3rem;
+        display: block;
+        text-align: center;
+        margin: 3rem;
+        &:hover{
+            text-decoration: underline;    
+            color: #ff0078;
+        }
+    }
+
+    &.desplegado{
+     
+        transform: translateX(0);
+
+    }
+
+    &__login{
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: map-get($map: $colores, $key: secundario);
+        text-decoration: none;
+        color: white;
+        &:hover{
+            text-decoration: underline;    
+        color: #ff0078;
+        }
+
+ 
+    }
+
+    &__btn-login{
+        display: none;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        font-weight: 700;
+        font-family: map-get($map: $fuentes, $key: secundario);
+
+    }
+}
+
+@media (min-width: 768px) { 
+    .nav{
+        padding: 0;
+        transform: translateX(0);
+        position: relative;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        height: fit-content;
+   
+        
+        &__enlace{
+            font-size: clamp(2rem, 2.5vw, 2.8rem);
+            display: flex;
+            margin: 0;
+          
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .visible{
+        transform: translate(0);
+    }
+
+    .hidden{
+        transform: translate(0);
+    }
+
+    
+}

@@ -1,0 +1,92 @@
+@use 'src/style/_settings.scss' as *;
+
+.task-page{
+    padding: 2rem;
+    background-image: url('src/assets/tasks.jpg');
+    background-size: cover;
+    min-height: calc(100vh - 14.2rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 6rem;
+
+    &__tasks{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__add{
+        display: flex;
+    }
+
+    &__input{
+        background-color: #721b46;
+        border: none;
+        font-size: 2rem;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 1rem 0rem 0rem 1rem;
+        color: white;
+        outline: none;
+
+        &:hover,:focus{
+            outline: none;
+            background-color: map-get($map: $colores, $key: primario );
+        }
+
+        &::placeholder{
+            color: white;
+        }
+    }
+
+    &__btn{
+        background-color: #721b46;
+        border: none;
+        color: white;
+        font-size: 3rem;
+        font-weight: 700;
+        border-radius: 0rem 1rem 1rem 0rem;
+        padding: 0rem 2rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+     
+    }
+
+    &__trash{
+        position: absolute;
+        bottom: .5rem;
+        font-size: 2rem;
+        background-color: rgba(224, 55, 55, 0.808);
+        padding: 1rem 2rem;
+        border-radius: 50%;
+        color: white;
+        right: 50%;
+        transform: translate(50%);
+    }
+}
+
+@media (min-width: 768px) { 
+    .task-page{
+        padding: 2rem 4rem;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .task-page{
+        grid-column: 1/25;
+        padding: 2rem 6rem;
+        width: calc(100vw - 210px);
+        margin-left: 210px;
+    }
+}
+
+@media (min-width: 1440px) { 
+    .task-page{
+        padding: 2rem 8rem;
+        height: calc(100vh - 9rem);
+    }
+}

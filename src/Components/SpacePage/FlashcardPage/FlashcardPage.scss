@@ -1,0 +1,206 @@
+@use 'src/style/_settings.scss' as *;
+
+.flashcard-page{
+    min-height: calc(100vh - 192px);
+    height: 100%;
+    width: 100%;
+    
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: url('src/assets/flashcardPage.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding:  2rem 2rem;
+
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__study{
+        border: none;
+        font-size: 2.5rem;
+        background-color: #fc0683;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:hover{
+            background-color:map-get($map: $colores, $key: primario);
+            cursor: pointer;
+        }
+    }
+
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    &__add{
+        background-color: rgb(34, 4, 70);
+        border: none;
+        width: 25rem;
+        height: 30rem;
+        font-size: 10rem;
+        color: rgb(255, 255, 255);
+        border: 2px dashed rgb(58, 38, 58);
+
+        &:hover{
+            cursor: pointer;
+            color:map-get($map: $colores, $key: primario)
+        }
+    }
+
+
+    &__save{
+        border: none;
+        padding: 1rem 2rem;
+        background-color: #fc0683;
+        color: white;
+        font-size: 2.5rem;
+        align-self: end;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+ 
+        
+        &:hover{
+            cursor: pointer;
+            background-color:map-get($map: $colores, $key: primario);
+        }
+    }
+
+    &__theme{
+        background-color: #6e0c3d;
+        border: none;
+        font-size: 2rem;
+        margin: 2rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:hover{
+            cursor: pointer;
+          
+        }
+    }
+}
+
+.space-page.study{
+    justify-content: center;
+    height: calc(100vh - 10rem);
+}
+
+.cards-container{
+    margin: 4rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+   
+}
+
+.theme-modal{
+    display: flex;
+    flex-direction: column;
+    
+    div{
+        background-color: rgba(255, 255, 255, 0.301);
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        button{
+            border: none;
+            background-color: transparent;
+            width: 7rem;
+        }
+    }
+ 
+
+    &__close{
+        font-size: 2rem;
+        background-color: #6e0c3d;
+        color: white;
+        border: none;
+        
+        
+    }
+
+   
+    
+}
+
+.pen{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.flashcard-materia{
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    background-color: #6e0c3d;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    p{
+        line-height: 1;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .flashcard-page{
+        margin: 0;
+        height: 100%;
+
+        padding-right: 2rem;
+        padding: 4rem 2rem 2rem 0rem;
+     
+        &.study{
+            height: 100vh ;
+        }
+
+        &__container{
+            max-width: 140rem;
+        }
+    }
+}
+
+
+@media (min-width: 1440px) { 
+    .flashcardPage{
+        grid-column: 1/25;
+        grid-row: 1/2;
+        height: 100%;
+        width: calc(100vw - 210px);
+        margin-left: 210px;
+    
+    }
+
+    .flashcard-page{
+        justify-content: space-between;
+        height: 100%;
+    
+ 
+ 
+    }
+}

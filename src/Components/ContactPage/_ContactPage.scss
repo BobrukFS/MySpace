@@ -1,0 +1,116 @@
+@use 'src/style/_settings.scss' as *;
+
+.contact{
+    width: 100vw;
+    height: calc(100vh );
+
+    background-image:url('/src/assets/contact.jpg') ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    h2{
+        font-size: 5rem;
+        color: map-get($map: $colores, $key: primario);
+    }
+ 
+}
+
+
+#contact-form{
+    background-color: white;
+    width: 90%;
+    height: 40rem;
+    max-width: 50rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    position: relative;
+
+    
+
+
+    label{
+        color: map-get($map: $colores, $key: terciario );
+        font-size: 2rem;
+        font-family: map-get($map: $fuentes, $key: secundario);
+    }
+    
+    input{
+        display: block;
+        padding: .5rem 1rem;
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        &:focus{
+            outline: auto map-get($map: $colores, $key: primario);
+        }
+    }
+    
+    textarea{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.6rem;
+       height: 10rem;
+       padding: .5rem 1rem;
+        border: 2px solid black;
+        border-radius: .5rem;
+        resize: none;
+        &:focus{
+            outline: auto map-get($map: $colores, $key: primario);
+        }
+    }
+    
+    button{
+        background-color: map-get($map: $colores, $key: terciario);
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        color: white;
+        border-radius: .5rem;
+        position: absolute;
+        bottom: -2.5rem;
+        right: 50%;
+        transform: translate(50%);
+    
+        &:hover{
+            background-color: map-get($map: $colores, $key: primario);
+            cursor: pointer;
+        }
+    
+    }
+
+}
+
+@media (min-width: 1024px) { 
+    .contact{
+     
+ 
+        height: 100vh;
+        h2{
+            font-size: 8rem;
+        }
+       #contact-form{
+        height: 50rem;
+
+        label{
+            font-size: 3rem;
+        }
+
+        button{
+            font-size: 3rem;
+        }
+
+        input, textarea{
+            font-size: 1.8rem;
+        }
+      
+       }
+    }
+
+    
+}
